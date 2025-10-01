@@ -64,6 +64,7 @@ def run_job(input_directory, output_directory):
     # Count frequencies
     word_counts = words["words"].value_counts().reset_index()
     word_counts.columns = ["word", "count"]
+    word_counts["count"] = word_counts["count"].astype(int)
 
     # Save output
     os.makedirs(output_directory, exist_ok=True)
