@@ -67,7 +67,7 @@ def run_job(input_directory, output_directory):
 
     # Save output
     os.makedirs(output_directory, exist_ok=True)
-    output_file = os.path.join(output_directory, "part_00000")
+    output_file = os.path.join(output_directory, "part-00000")
     word_counts.to_csv(output_file, sep="\t", index=False)
 
     # Create marker
